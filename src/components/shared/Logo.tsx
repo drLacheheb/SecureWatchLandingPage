@@ -9,15 +9,15 @@ export const Logo = ({ className = "", size = "md" }: { className?: string; size
     let gapClass = "gap-2";
 
     if (isXl) {
-        boxClass = "w-14 h-14";
-        iconClass = "w-8 h-8";
-        textClass = "text-4xl";
-        gapClass = "gap-3";
+        boxClass = "w-10 h-10 md:w-14 md:h-14";
+        iconClass = "w-6 h-6 md:w-8 md:h-8";
+        textClass = "text-2xl md:text-4xl";
+        gapClass = "gap-2 md:gap-3";
     } else if (is2Xl) {
-        boxClass = "w-20 h-20";
-        iconClass = "w-12 h-12";
-        textClass = "text-6xl";
-        gapClass = "gap-6";
+        boxClass = "w-12 h-12 md:w-20 md:h-20";
+        iconClass = "w-6 h-6 md:w-12 md:h-12";
+        textClass = "text-3xl md:text-6xl";
+        gapClass = "gap-3 md:gap-6";
     }
 
     return (

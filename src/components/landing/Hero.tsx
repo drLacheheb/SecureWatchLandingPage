@@ -29,7 +29,7 @@ export const Hero = () => {
 
                 {/* Animated Headline */}
                 <motion.h1
-                    className="text-5xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl"
+                    className="text-3xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}

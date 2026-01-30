@@ -70,12 +70,13 @@ export const HowItWorks = () => {
             </div>
             <div className="container max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 relative">
 
-                {/* Left Column: Text Steps */}
-                <div className="flex flex-col gap-24 py-12">
-                    <div className="sticky top-24 self-start mb-8 lg:hidden">
-                        <h2 className="text-3xl font-bold text-white">How It Works</h2>
-                    </div>
+                {/* Mobile Heading */}
+                <div className="lg:hidden mb-8 text-center">
+                    <h2 className="text-3xl font-bold text-white">How It Works</h2>
+                </div>
 
+                {/* Left Column: Text Steps */}
+                <div className="flex flex-col gap-24 py-12 order-2 lg:order-1">
                     <div className="hidden lg:block mb-12">
                         <h2 className="text-4xl font-bold text-white mb-4">Seamless Integration</h2>
                         <p className="text-zinc-400">Up and running in minutes, not months.</p>
@@ -100,17 +101,17 @@ export const HowItWorks = () => {
                 </div>
 
                 {/* Right Column: Visuals */}
-                <div className="hidden lg:block relative h-full min-h-[500px]">
-                    <div className="sticky top-32 w-full aspect-square bg-zinc-900/50 rounded-2xl border border-zinc-800 overflow-hidden p-8 backdrop-blur-sm">
+                <div className="relative h-[400px] lg:h-full lg:min-h-[500px] lg:mt-0 order-1 lg:order-2">
+                    <div className="sticky top-32 w-full aspect-square rounded-2xl overflow-hidden p-8">
 
                         <div className="relative w-full h-full">
                             {/* Diagram Container */}
                             <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
                                 {/* Flow 1: Laptop -> Cube (Horizontal) */}
                                 <motion.path
-                                    d="M 20 20 L 80 20"
+                                    d="M 20 15 L 80 15"
                                     fill="transparent"
-                                    strokeWidth="0.5"
+                                    strokeWidth="1"
                                     className="stroke-zinc-700 dashed"
                                     strokeDasharray="2 2"
                                 />
@@ -120,7 +121,7 @@ export const HowItWorks = () => {
                                     animate={{
                                         offsetDistance: ["0%", "100%"]
                                     }}
-                                    style={{ offsetPath: "path('M 20 20 L 80 20')" }}
+                                    style={{ offsetPath: "path('M 20 15 L 80 15')" }}
                                     transition={{
                                         duration: 2,
                                         repeat: Infinity,
@@ -130,9 +131,9 @@ export const HowItWorks = () => {
 
                                 {/* Flow 2: Database -> Cube (Curved Upwards) */}
                                 <motion.path
-                                    d="M 50 45 Q 50 20 80 20"
+                                    d="M 50 50 Q 50 15 80 15"
                                     fill="transparent"
-                                    strokeWidth="0.5"
+                                    strokeWidth="1"
                                     className="stroke-zinc-700"
                                     strokeDasharray="2 2"
                                 />
@@ -142,7 +143,7 @@ export const HowItWorks = () => {
                                     animate={{
                                         offsetDistance: ["0%", "100%"]
                                     }}
-                                    style={{ offsetPath: "path('M 50 45 Q 50 20 80 20')" }}
+                                    style={{ offsetPath: "path('M 50 50 Q 50 15 80 15')" }}
                                     transition={{
                                         duration: 2.5,
                                         repeat: Infinity,
@@ -153,9 +154,9 @@ export const HowItWorks = () => {
 
                                 {/* Flow 3: Database -> Scan (Vertical Down) */}
                                 <motion.path
-                                    d="M 50 45 L 50 75"
+                                    d="M 50 50 L 50 85"
                                     fill="transparent"
-                                    strokeWidth="0.5"
+                                    strokeWidth="1"
                                     className="stroke-zinc-700"
                                     strokeDasharray="2 2"
                                 />
@@ -165,7 +166,7 @@ export const HowItWorks = () => {
                                     animate={{
                                         offsetDistance: ["0%", "100%"]
                                     }}
-                                    style={{ offsetPath: "path('M 50 45 L 50 75')" }}
+                                    style={{ offsetPath: "path('M 50 50 L 50 85')" }}
                                     transition={{
                                         duration: 2,
                                         repeat: Infinity,
@@ -176,9 +177,9 @@ export const HowItWorks = () => {
 
                                 {/* Flow 4: Browser -> Scan (Horizontal) */}
                                 <motion.path
-                                    d="M 20 75 L 50 75"
+                                    d="M 20 85 L 50 85"
                                     fill="transparent"
-                                    strokeWidth="0.5"
+                                    strokeWidth="1"
                                     className="stroke-zinc-700"
                                     strokeDasharray="2 2"
                                 />
@@ -188,7 +189,7 @@ export const HowItWorks = () => {
                                     animate={{
                                         offsetDistance: ["0%", "100%"]
                                     }}
-                                    style={{ offsetPath: "path('M 20 75 L 50 75')" }}
+                                    style={{ offsetPath: "path('M 20 85 L 50 85')" }}
                                     transition={{
                                         duration: 1.5,
                                         repeat: Infinity,
@@ -199,9 +200,9 @@ export const HowItWorks = () => {
 
                                 {/* Flow 5: Scan -> Server (Horizontal) */}
                                 <motion.path
-                                    d="M 50 75 L 80 75"
+                                    d="M 50 85 L 80 85"
                                     fill="transparent"
-                                    strokeWidth="0.5"
+                                    strokeWidth="1"
                                     className="stroke-zinc-700"
                                     strokeDasharray="2 2"
                                 />
@@ -211,7 +212,7 @@ export const HowItWorks = () => {
                                     animate={{
                                         offsetDistance: ["0%", "100%"]
                                     }}
-                                    style={{ offsetPath: "path('M 50 75 L 80 75')" }}
+                                    style={{ offsetPath: "path('M 50 85 L 80 85')" }}
                                     transition={{
                                         duration: 1.5,
                                         repeat: Infinity,
@@ -221,51 +222,51 @@ export const HowItWorks = () => {
                                 />
 
                                 {/* Vertical Dashed Line (Boundary) */}
-                                <line x1="40" y1="10" x2="40" y2="30" stroke="currentColor" strokeWidth="0.2" className="text-zinc-600" strokeDasharray="1 1" />
+                                <line x1="40" y1="5" x2="40" y2="25" stroke="currentColor" strokeWidth="0.5" className="text-zinc-600" strokeDasharray="1 1" />
                             </svg>
 
                             {/* Nodes Layout */}
                             {/* Top Section */}
-                            <div className="absolute top-[20%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-500/10 z-10">
-                                    <Laptop className="w-6 h-6" />
+                            <div className="absolute top-[15%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-500/10 z-10">
+                                    <Laptop className="w-8 h-8" />
                                 </div>
                                 <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Source</span>
                             </div>
 
-                            <div className="absolute top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-indigo-400 z-10">
-                                    <Box className="w-6 h-6" />
+                            <div className="absolute top-[15%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-indigo-400 z-10">
+                                    <Box className="w-8 h-8" />
                                 </div>
                                 <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Processing</span>
                             </div>
 
                             {/* Middle */}
-                            <div className="absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-300 z-10">
-                                    <Database className="w-6 h-6" />
+                            <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-300 z-10">
+                                    <Database className="w-8 h-8" />
                                 </div>
                                 <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Storage</span>
                             </div>
 
                             {/* Bottom Section */}
-                            <div className="absolute top-[75%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-blue-400 z-10">
-                                    <AppWindow className="w-6 h-6" />
+                            <div className="absolute top-[85%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-blue-400 z-10">
+                                    <AppWindow className="w-8 h-8" />
                                 </div>
                                 <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Interface</span>
                             </div>
 
-                            <div className="absolute top-[75%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-500 z-10">
-                                    <ScanSearch className="w-6 h-6" />
+                            <div className="absolute top-[85%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-500 z-10">
+                                    <ScanSearch className="w-8 h-8" />
                                 </div>
                                 <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Analysis</span>
                             </div>
 
-                            <div className="absolute top-[75%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-purple-400 z-10">
-                                    <Server className="w-6 h-6" />
+                            <div className="absolute top-[85%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-purple-400 z-10">
+                                    <Server className="w-8 h-8" />
                                 </div>
                                 <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Server</span>
                             </div>
