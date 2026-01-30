@@ -13,17 +13,17 @@ export const Booking = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                     Ready to secure your network?
                 </h2>
-                <p className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-zinc-400 mb-12 max-w-2xl mx-auto">
                     We are currently working with select design partners to refine our detection engine.
                     Schedule a time to discuss your specific requirements.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Button size="lg" className="h-14 px-8 text-lg bg-emerald-500 hover:bg-emerald-600 text-black font-bold shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all">
+                    <Button size="lg" className="w-72 h-14 px-8 text-lg bg-emerald-500 hover:bg-emerald-600 text-black font-bold shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all">
                         <Calendar className="mr-2 w-5 h-5" />
                         Book Integration Call
                     </Button>
-                    <Button variant="outline" size="lg" className="h-14 px-8 text-lg border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white" asChild>
+                    <Button variant="outline" size="lg" className="w-72 h-14 px-8 text-lg border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white" asChild>
                         <a href="mailto:partners@securewatch.io">Contact Sales</a>
                     </Button>
                 </div>

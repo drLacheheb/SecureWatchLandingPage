@@ -7,7 +7,7 @@ export const ExecutiveInsights = () => {
             <div className="container max-w-7xl mx-auto px-4 grid place-items-center gap-12">
                 <div className="text-center max-w-3xl">
                     <h2 className="text-2xl md:text-5xl font-bold text-white mb-6">Designed for Leadership</h2>
-                    <p className="text-zinc-400 text-2xl">
+                    <p className="text-zinc-400 text-lg md:text-2xl">
                         Gain instant visibility into your organization's security posture.
                         Real-time compliance tracking, risk analysis, and executive reporting at your fingertips.
                     </p>

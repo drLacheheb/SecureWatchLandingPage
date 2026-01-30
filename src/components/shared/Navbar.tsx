@@ -35,10 +35,10 @@ export const Navbar = () => {
 
                 {/* Desktop Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <Button variant="ghost" className="text-zinc-400 hover:text-white hover:bg-zinc-800 text-xl h-12" asChild>
+                    <Button variant="ghost" className="text-zinc-400 hover:text-white hover:bg-zinc-800 h-14 px-8 text-lg" asChild>
                         <a href="#contact">Contact Sales</a>
                     </Button>
-                    <Button variant="default" className="bg-emerald-500 hover:bg-emerald-600 text-black font-semibold text-xl h-12" asChild>
+                    <Button variant="default" className="bg-emerald-500 hover:bg-emerald-600 text-black font-semibold h-14 px-8 text-lg" asChild>
                         <a href="#book-demo">Book a Demo</a>
                     </Button>
                 </div>
@@ -73,10 +73,10 @@ export const Navbar = () => {
                                         ))}
                                     </div>
                                     <div className="flex flex-col gap-4 mt-auto">
-                                        <Button variant="outline" className="w-full border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white h-12 text-lg" asChild>
+                                        <Button variant="outline" className="w-full border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white h-14 px-8 text-lg" asChild>
                                             <a href="#contact">Contact Sales</a>
                                         </Button>
-                                        <Button variant="default" className="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-bold h-14 text-xl shadow-[0_0_20px_rgba(16,185,129,0.2)]" asChild>
+                                        <Button variant="default" className="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-bold h-14 px-8 text-lg shadow-[0_0_20px_rgba(16,185,129,0.2)]" asChild>
                                             <a href="#book-demo">Book a Demo</a>
                                         </Button>
                                     </div>

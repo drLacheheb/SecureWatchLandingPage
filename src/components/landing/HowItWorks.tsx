@@ -90,12 +90,12 @@ export const HowItWorks = () => {
                                     {step.id}
                                 </div>
                                 {index !== steps.length - 1 && (
-                                    <div className="w-px h-full bg-zinc-800 my-4 group-hover:bg-emerald-500/30 transition-colors"></div>
+                                    <div className="w-px flex-1 bg-zinc-800 my-4 group-hover:bg-emerald-500/30 transition-colors"></div>
                                 )}
                             </div>
                             <div className="pt-2">
-                                <h3 className="text-3xl font-bold text-zinc-100 mb-2 group-hover:text-emerald-400 transition-colors">{step.title}</h3>
-                                <p className="text-xl text-zinc-400 leading-relaxed max-w-md">{step.description}</p>
+                                <h3 className="text-xl md:text-3xl font-bold text-zinc-100 mb-2 group-hover:text-emerald-400 transition-colors">{step.title}</h3>
+                                <p className="text-base md:text-xl text-zinc-400 leading-relaxed max-w-md">{step.description}</p>
                             </div>
                         </div>
                     ))}

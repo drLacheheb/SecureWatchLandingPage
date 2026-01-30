@@ -40,7 +40,7 @@ export const Hero = () => {
 
                 {/* Animated Subheadline */}
                 <motion.p
-                    className="text-2xl md:text-3xl text-zinc-400 max-w-2xl"
+                    className="text-lg md:text-3xl text-zinc-400 max-w-2xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -50,18 +50,18 @@ export const Hero = () => {
 
                 {/* Animated CTAs */}
                 <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 w-full max-w-md"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 w-full"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-black font-bold h-16 text-xl" asChild>
+                    <Button size="lg" className="w-72 bg-emerald-500 hover:bg-emerald-600 text-black font-bold h-14 px-8 text-lg" asChild>
                         <a href="#book-demo">
                             Schedule Meeting
                             <ArrowRight className="ml-2 w-6 h-6" />
                         </a>
                     </Button>
-                    <Button variant="outline" size="lg" className="border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800 h-16 text-xl" asChild>
+                    <Button variant="outline" size="lg" className="w-72 border-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-800 h-14 px-8 text-lg" asChild>
                         <a href="#architecture">View Architecture</a>
                     </Button>
                 </motion.div>
