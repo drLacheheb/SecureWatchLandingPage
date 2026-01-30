@@ -3,7 +3,7 @@ import { LayoutDashboard, ShieldCheck, TrendingUp, AlertTriangle, Users, FileTex
 
 export const ExecutiveInsights = () => {
     return (
-        <section className="py-24 bg-zinc-900/30 border-y border-zinc-900">
+        <section id="insights" className="py-24 bg-zinc-900/30 border-y border-zinc-900">
             <div className="container max-w-7xl mx-auto px-4 grid place-items-center gap-12">
                 <div className="text-center max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Designed for Leadership</h2>
@@ -28,9 +28,6 @@ export const ExecutiveInsights = () => {
                                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                 <span className="text-sm text-zinc-300">Live System Status</span>
                             </div>
-                            <button className="p-2 hover:bg-zinc-800 rounded-lg transition-colors">
-                                <FileText className="w-5 h-5 text-zinc-400" />
-                            </button>
                         </div>
                     </div>
 
