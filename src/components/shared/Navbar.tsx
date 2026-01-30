@@ -5,10 +5,10 @@ import { Menu } from "lucide-react";
 import { Logo } from "./Logo";
 
 const navLinks = [
-    { name: "Platform", href: "#platform" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Resources", href: "#resources" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Technology", href: "#technology" },
+    { name: "Features", href: "#features" },
+    { name: "How it Works", href: "#how-it-works" },
+    { name: "Insights", href: "#insights" },
 ];
 
 export const Navbar = () => {

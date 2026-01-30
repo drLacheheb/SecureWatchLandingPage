@@ -5,6 +5,7 @@ import { Calendar } from "lucide-react";
 export const Booking = () => {
     return (
         <section id="book-demo" className="py-24 bg-zinc-950 border-t border-zinc-900 grid place-items-center relative overflow-hidden">
+            <div id="contact" className="absolute top-0" />
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 

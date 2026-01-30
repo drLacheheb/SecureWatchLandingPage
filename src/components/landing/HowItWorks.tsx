@@ -39,7 +39,9 @@ export const HowItWorks = () => {
     }, []);
 
     return (
-        <section className="py-24 bg-zinc-950 relative border-t border-zinc-900 overflow-hidden">
+        <section id="how-it-works" className="py-24 bg-zinc-950 relative border-t border-zinc-900 overflow-hidden">
+            {/* Architecture anchor for Hero link */}
+            <div id="architecture" className="absolute top-0" />
             <style>{`
                 @keyframes float-particle {
                     0% { transform: translateY(0) translateX(0); opacity: 0; }
