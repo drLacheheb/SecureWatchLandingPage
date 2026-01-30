@@ -65,30 +65,6 @@ export const Hero = () => {
                         <a href="#architecture">View Architecture</a>
                     </Button>
                 </motion.div>
-
-                {/* Animated Code Snippet */}
-                <motion.div
-                    className="mt-12 w-full max-w-lg bg-zinc-900/50 backdrop-blur border border-zinc-800 rounded-lg p-4 text-left shadow-2xl"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                    <div className="flex items-center gap-2 mb-4 border-b border-zinc-800 pb-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
-                        <div className="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/50"></div>
-                        <span className="ml-auto text-xs text-zinc-500 font-mono">config.yaml</span>
-                    </div>
-                    <pre className="font-mono text-xs sm:text-sm text-zinc-300 overflow-x-auto">
-                        <code>
-                            <span className="text-indigo-400">network_monitor</span>:
-                            <span className="text-emerald-400">mode</span>: <span className="text-yellow-200">"active_defense"</span>
-                            <span className="text-emerald-400">encryption</span>: <span className="text-purple-400">AES-256</span>
-                            <span className="text-emerald-400">auto_patch</span>: <span className="text-emerald-500">true</span>
-                            <span className="text-zinc-500"># Real-time threat analysis enabled</span>
-                        </code>
-                    </pre>
-                </motion.div>
             </div>
         </section>
     );
