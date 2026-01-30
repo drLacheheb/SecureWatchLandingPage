@@ -3,8 +3,6 @@
 **The All-Seeing Shield.**
 A next-generation, privacy-first Network Detection and Response (NDR) platform.
 
-![SecureWatch Hero](./public/favicon.svg)
-
 ## Overview
 
 SecureWatch is a Cyber-security SaaS landing page built to demonstrate a premium, high-tech aesthetic. It features a modern tech stack and responsive design.
