@@ -26,7 +26,7 @@ export const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-xl font-medium text-zinc-400 hover:text-emerald-400 transition-colors"
+                            className="text-2xl font-medium text-zinc-400 hover:text-emerald-400 transition-colors"
                         >
                             {link.name}
                         </a>
@@ -35,10 +35,10 @@ export const Navbar = () => {
 
                 {/* Desktop Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <Button variant="ghost" className="text-zinc-400 hover:text-white hover:bg-zinc-800" asChild>
+                    <Button variant="ghost" className="text-zinc-400 hover:text-white hover:bg-zinc-800 text-xl h-12" asChild>
                         <a href="#contact">Contact Sales</a>
                     </Button>
-                    <Button variant="default" className="bg-emerald-500 hover:bg-emerald-600 text-black font-semibold" asChild>
+                    <Button variant="default" className="bg-emerald-500 hover:bg-emerald-600 text-black font-semibold text-xl h-12" asChild>
                         <a href="#book-demo">Book a Demo</a>
                     </Button>
                 </div>
@@ -58,7 +58,7 @@ export const Navbar = () => {
                                         <a
                                             key={link.name}
                                             href={link.href}
-                                            className="text-lg font-medium text-zinc-400 hover:text-emerald-400"
+                                            className="text-2xl font-medium text-zinc-400 hover:text-emerald-400"
                                         >
                                             {link.name}
                                         </a>
