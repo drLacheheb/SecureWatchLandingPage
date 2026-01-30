@@ -2,7 +2,16 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 
+import { getCalApi } from "@calcom/embed-react";
+
 export const Booking = () => {
+    React.useEffect(() => {
+        (async function () {
+            const cal = await getCalApi();
+            cal("ui", { "theme": "dark", "styles": { "branding": { "brandColor": "#10b981" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+        })();
+    }, []);
+
     return (
         <section id="book-demo" className="py-24 bg-zinc-950 border-t border-zinc-900 grid place-items-center relative overflow-hidden">
             <div id="contact" className="absolute top-0" />
@@ -19,12 +28,14 @@ export const Booking = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <Button size="lg" className="w-72 h-14 px-8 text-lg bg-emerald-500 hover:bg-emerald-600 text-black font-bold shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all">
+                    <Button
+                        size="lg"
+                        className="w-72 h-14 px-8 text-lg bg-emerald-500 hover:bg-emerald-600 text-black font-bold shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all"
+                        data-cal-link="drlachdev-acrqep/15min"
+                        data-cal-config='{"layout":"month_view","theme":"dark"}'
+                    >
                         <Calendar className="mr-2 w-5 h-5" />
                         Book Integration Call
-                    </Button>
-                    <Button variant="outline" size="lg" className="w-72 h-14 px-8 text-lg border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white" asChild>
-                        <a href="mailto:partners@securewatch.io">Contact Sales</a>
                     </Button>
                 </div>
 
