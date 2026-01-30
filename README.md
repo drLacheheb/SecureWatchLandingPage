@@ -44,7 +44,7 @@ SecureWatch is a Cyber-security SaaS landing page built to demonstrate a premium
 
 This project uses environment variables for configuration. See `.env.example` for reference.
 
--   `PUBLIC_CAL_USERNAME`: Your Cal.com username (e.g., `drlachdev-acrqep`).
+-   `PUBLIC_CAL_USERNAME`: Your Cal.com username (e.g., `your-username`).
 
 ## Docker Support
 
