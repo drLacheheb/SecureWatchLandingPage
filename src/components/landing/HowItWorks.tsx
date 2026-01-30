@@ -24,8 +24,48 @@ const steps = [
 ];
 
 export const HowItWorks = () => {
+    const [particles, setParticles] = React.useState<Array<{ left: string, top: string, delay: string, duration: string, size: number }>>([]);
+
+    React.useEffect(() => {
+        setParticles(
+            [...Array(50)].map(() => ({
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                delay: `-${Math.random() * 8}s`,
+                duration: `${Math.random() * 5 + 3}s`,
+                size: Math.random() * 4 + 2 // 2px to 6px size
+            }))
+        );
+    }, []);
+
     return (
-        <section className="py-24 bg-zinc-950 relative border-t border-zinc-900">
+        <section className="py-24 bg-zinc-950 relative border-t border-zinc-900 overflow-hidden">
+            <style>{`
+                @keyframes float-particle {
+                    0% { transform: translateY(0) translateX(0); opacity: 0; }
+                    20% { opacity: 0.8; }
+                    80% { opacity: 0.8; }
+                    100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+                }
+            `}</style>
+
+            {/* Floating Particles Background */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                {particles.map((p, i) => (
+                    <div
+                        key={i}
+                        className="absolute rounded-full bg-emerald-500 blur-[1px] shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                        style={{
+                            left: p.left,
+                            top: p.top,
+                            width: `${p.size}px`,
+                            height: `${p.size}px`,
+                            animation: `float-particle ${p.duration} ease-in-out infinite`,
+                            animationDelay: p.delay,
+                        }}
+                    />
+                ))}
+            </div>
             <div className="container max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 relative">
 
                 {/* Left Column: Text Steps */}
