@@ -1,26 +1,29 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+import Layout from "@/layouts/Layout.astro";
+import { Navbar } from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer.astro";
+import { Hero } from "@/components/landing/Hero";
+import Technology from "@/components/landing/Technology.astro";
+import Features from "@/components/landing/Features.astro";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { DeveloperExperience } from "@/components/landing/DeveloperExperience";
+import { Booking } from "@/components/landing/Booking";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<Layout title="SecureWatch - Enterprise Network Detection">
+	<Navbar client:load />
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+	<main>
+		<Hero client:visible />
+		<Technology />
+		<Features />
+		<HowItWorks client:visible />
+		<DeveloperExperience />
+		<Booking />
+	</main>
+
+	<Footer />
+</Layout>

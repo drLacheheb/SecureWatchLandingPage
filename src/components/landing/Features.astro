@@ -1,0 +1,94 @@
+---
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardContent,
+} from "@/components/ui/card";
+import { Shield, Zap, Lock, Eye, Activity, Globe } from "lucide-react";
+
+const features = [
+    {
+        title: "Real-time Detection",
+        description:
+            "Identify threats instantly with our advanced anomaly detection engine.",
+        icon: Zap,
+        className: "md:col-span-1",
+    },
+    {
+        title: "Global Intelligence",
+        description:
+            "Crowdsourced threat intelligence from over 100 countries to keep you ahead.",
+        icon: Globe,
+        className: "md:col-span-2",
+    },
+    {
+        title: "Zero Trust Architecture",
+        description:
+            "Never trust, always verify. Strict identity verification for every user and device.",
+        icon: Lock,
+        className: "md:col-span-2",
+    },
+    {
+        title: "Complete Visibility",
+        description:
+            "See every packet, every flow, and every interaction across your network.",
+        icon: Eye,
+        className: "md:col-span-1",
+    },
+    {
+        title: "Automated Response",
+        description:
+            "Take action immediately with automated playbooks and remediation scripts.",
+        icon: Shield,
+        className: "md:col-span-1",
+    },
+    {
+        title: "Performance Monitoring",
+        description:
+            "Ensure security doesn't come at the cost of network performance.",
+        icon: Activity,
+        className: "md:col-span-2",
+    },
+];
+---
+
+<section id="solutions" class="py-24 bg-zinc-950">
+    <div class="container max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+                Uncompromising Security
+            </h2>
+            <p class="text-zinc-400 max-w-2xl mx-auto">
+                Built for the modern threat landscape. SecureWatch provides
+                comprehensive coverage for your entire infrastructure.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {
+                features.map((feature) => {
+                    const Icon = feature.icon;
+                    return (
+                        <Card
+                            className={`bg-zinc-900/20 border-zinc-800 group hover:border-emerald-500/50 transition-colors duration-300 ${feature.className}`}
+                        >
+                            <CardHeader>
+                                <div class="w-12 h-12 rounded-lg bg-emerald-900/20 grid place-items-center mb-4 text-emerald-400 group-hover:text-emerald-300 group-hover:bg-emerald-900/30 transition-colors">
+                                    <Icon className="w-6 h-6" />
+                                </div>
+                                <CardTitle className="text-xl text-zinc-100">
+                                    {feature.title}
+                                </CardTitle>
+                                <CardDescription className="text-zinc-400 mt-2">
+                                    {feature.description}
+                                </CardDescription>
+                            </CardHeader>
+                        </Card>
+                    );
+                })
+            }
+        </div>
+    </div>
+</section>
