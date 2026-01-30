@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Laptop, Database, Box, AppWindow, ScanSearch, Server } from "lucide-react";
 
 const steps = [
     {
@@ -58,23 +59,175 @@ export const HowItWorks = () => {
 
                 {/* Right Column: Visuals */}
                 <div className="hidden lg:block relative h-full min-h-[500px]">
-                    <div className="sticky top-32 w-full aspect-square bg-zinc-900/50 rounded-2xl border border-zinc-800 overflow-hidden grid place-items-center p-8 backdrop-blur-sm">
-                        {/* Abstract Visual Representation */}
-                        <div className="relative w-full h-full bg-zinc-950 rounded-xl border border-zinc-800 overflow-hidden flex items-center justify-center">
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent)]"></div>
-                            <div className="text-zinc-600 font-mono text-sm">[ Visual Representation of Network ]</div>
+                    <div className="sticky top-32 w-full aspect-square bg-zinc-900/50 rounded-2xl border border-zinc-800 overflow-hidden p-8 backdrop-blur-sm">
 
-                            {/* Animated element to simulate activity */}
-                            <motion.div
-                                className="absolute w-32 h-32 border border-emerald-500/30 rounded-full"
-                                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
-                                transition={{ duration: 3, repeat: Infinity }}
-                            />
-                            <motion.div
-                                className="absolute w-48 h-48 border border-indigo-500/20 rounded-full"
-                                animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0, 0.3] }}
-                                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                            />
+                        <div className="relative w-full h-full">
+                            {/* Diagram Container */}
+                            <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                {/* Flow 1: Laptop -> Cube (Horizontal) */}
+                                <motion.path
+                                    d="M 20 20 L 80 20"
+                                    fill="transparent"
+                                    strokeWidth="0.5"
+                                    className="stroke-zinc-700 dashed"
+                                    strokeDasharray="2 2"
+                                />
+                                <motion.circle
+                                    r="1.5"
+                                    fill="#34d399"
+                                    animate={{
+                                        offsetDistance: ["0%", "100%"]
+                                    }}
+                                    style={{ offsetPath: "path('M 20 20 L 80 20')" }}
+                                    transition={{
+                                        duration: 2,
+                                        repeat: Infinity,
+                                        ease: "linear"
+                                    }}
+                                />
+
+                                {/* Flow 2: Database -> Cube (Curved Upwards) */}
+                                <motion.path
+                                    d="M 50 45 Q 50 20 80 20"
+                                    fill="transparent"
+                                    strokeWidth="0.5"
+                                    className="stroke-zinc-700"
+                                    strokeDasharray="2 2"
+                                />
+                                <motion.circle
+                                    r="1.5"
+                                    fill="#34d399"
+                                    animate={{
+                                        offsetDistance: ["0%", "100%"]
+                                    }}
+                                    style={{ offsetPath: "path('M 50 45 Q 50 20 80 20')" }}
+                                    transition={{
+                                        duration: 2.5,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                        delay: 0.5
+                                    }}
+                                />
+
+                                {/* Flow 3: Database -> Scan (Vertical Down) */}
+                                <motion.path
+                                    d="M 50 45 L 50 75"
+                                    fill="transparent"
+                                    strokeWidth="0.5"
+                                    className="stroke-zinc-700"
+                                    strokeDasharray="2 2"
+                                />
+                                <motion.circle
+                                    r="1.5"
+                                    fill="#34d399"
+                                    animate={{
+                                        offsetDistance: ["0%", "100%"]
+                                    }}
+                                    style={{ offsetPath: "path('M 50 45 L 50 75')" }}
+                                    transition={{
+                                        duration: 2,
+                                        repeat: Infinity,
+                                        ease: "linear",
+                                        delay: 1
+                                    }}
+                                />
+
+                                {/* Flow 4: Browser -> Scan (Horizontal) */}
+                                <motion.path
+                                    d="M 20 75 L 50 75"
+                                    fill="transparent"
+                                    strokeWidth="0.5"
+                                    className="stroke-zinc-700"
+                                    strokeDasharray="2 2"
+                                />
+                                <motion.circle
+                                    r="1.5"
+                                    fill="#34d399"
+                                    animate={{
+                                        offsetDistance: ["0%", "100%"]
+                                    }}
+                                    style={{ offsetPath: "path('M 20 75 L 50 75')" }}
+                                    transition={{
+                                        duration: 1.5,
+                                        repeat: Infinity,
+                                        ease: "linear",
+                                        delay: 1.5
+                                    }}
+                                />
+
+                                {/* Flow 5: Scan -> Server (Horizontal) */}
+                                <motion.path
+                                    d="M 50 75 L 80 75"
+                                    fill="transparent"
+                                    strokeWidth="0.5"
+                                    className="stroke-zinc-700"
+                                    strokeDasharray="2 2"
+                                />
+                                <motion.circle
+                                    r="1.5"
+                                    fill="#34d399"
+                                    animate={{
+                                        offsetDistance: ["0%", "100%"]
+                                    }}
+                                    style={{ offsetPath: "path('M 50 75 L 80 75')" }}
+                                    transition={{
+                                        duration: 1.5,
+                                        repeat: Infinity,
+                                        ease: "linear",
+                                        delay: 2
+                                    }}
+                                />
+
+                                {/* Vertical Dashed Line (Boundary) */}
+                                <line x1="40" y1="10" x2="40" y2="30" stroke="currentColor" strokeWidth="0.2" className="text-zinc-600" strokeDasharray="1 1" />
+                            </svg>
+
+                            {/* Nodes Layout */}
+                            {/* Top Section */}
+                            <div className="absolute top-[20%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-500/10 z-10">
+                                    <Laptop className="w-6 h-6" />
+                                </div>
+                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Source</span>
+                            </div>
+
+                            <div className="absolute top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-indigo-400 z-10">
+                                    <Box className="w-6 h-6" />
+                                </div>
+                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Processing</span>
+                            </div>
+
+                            {/* Middle */}
+                            <div className="absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-300 z-10">
+                                    <Database className="w-6 h-6" />
+                                </div>
+                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Storage</span>
+                            </div>
+
+                            {/* Bottom Section */}
+                            <div className="absolute top-[75%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-blue-400 z-10">
+                                    <AppWindow className="w-6 h-6" />
+                                </div>
+                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Interface</span>
+                            </div>
+
+                            <div className="absolute top-[75%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-500 z-10">
+                                    <ScanSearch className="w-6 h-6" />
+                                </div>
+                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Analysis</span>
+                            </div>
+
+                            <div className="absolute top-[75%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                                <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-purple-400 z-10">
+                                    <Server className="w-6 h-6" />
+                                </div>
+                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Server</span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
