@@ -29,12 +29,38 @@ SecureWatch is a Cyber-security SaaS landing page built to demonstrate a premium
     npm install
     ```
 
-3.  Start the development server:
+3.  Set up environment variables:
+    ```bash
+    cp .env.example .env
+    ```
+    Open `.env` and set your `PUBLIC_CAL_USERNAME`.
+
+4.  Start the development server:
     ```bash
     npm run dev
     ```
 
-4.  Open [http://localhost:4321](http://localhost:4321) in your browser.
+5.  Open [http://localhost:4321](http://localhost:4321) in your browser.
+
+## Configuration
+
+This project uses environment variables for configuration. See `.env.example` for reference.
+
+-   `PUBLIC_CAL_USERNAME`: Your Cal.com username (e.g., `drlachdev-acrqep`).
+
+## Docker Support
+
+You can also run the application using Docker.
+
+### Build and Run
+
+```bash
+# Build the image
+docker build -t securewatch-landing .
+
+# Run container (Access at http://localhost:8080)
+docker run -p 8080:80 securewatch-landing
+```
 
 ## Building for Production
 
