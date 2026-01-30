@@ -31,7 +31,7 @@ export const Booking = () => {
                     <Button
                         size="lg"
                         className="w-72 h-14 px-8 text-lg bg-emerald-500 hover:bg-emerald-600 text-black font-bold shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all"
-                        data-cal-link="drlachdev-acrqep/15min"
+                        data-cal-link={`${import.meta.env.PUBLIC_CAL_USERNAME}/15min`}
                         data-cal-config='{"layout":"month_view","theme":"dark"}'
                     >
                         <Calendar className="mr-2 w-5 h-5" />
