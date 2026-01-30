@@ -7,14 +7,14 @@ export const DeveloperExperience = () => {
             <div className="container max-w-7xl mx-auto px-4 grid place-items-center gap-12">
                 <div className="text-center max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Built for Developers</h2>
-                    <p className="text-zinc-400 text-lg">
+                    <p className="text-zinc-400 text-2xl">
                         Full API access, comprehensive CLI, and transparent logs.
                         We provide the tools you need to integrate security into your CI/CD pipeline.
                     </p>
                 </div>
 
                 {/* Terminal Window */}
-                <div className="w-full max-w-4xl bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden border border-zinc-800 font-mono text-sm md:text-base">
+                <div className="w-full max-w-4xl bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden border border-zinc-800 font-mono text-lg md:text-xl">
                     {/* Terminal Header */}
                     <div className="flex items-center gap-2 px-4 py-3 bg-[#2d2d2d] border-b border-black/50">
                         <div className="flex gap-2">

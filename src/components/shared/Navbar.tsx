@@ -26,7 +26,7 @@ export const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-zinc-400 hover:text-emerald-400 transition-colors"
+                            className="text-xl font-medium text-zinc-400 hover:text-emerald-400 transition-colors"
                         >
                             {link.name}
                         </a>

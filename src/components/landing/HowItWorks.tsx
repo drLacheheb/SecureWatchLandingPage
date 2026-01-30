@@ -50,8 +50,8 @@ export const HowItWorks = () => {
                                 )}
                             </div>
                             <div className="pt-2">
-                                <h3 className="text-2xl font-bold text-zinc-100 mb-2 group-hover:text-emerald-400 transition-colors">{step.title}</h3>
-                                <p className="text-zinc-400 leading-relaxed max-w-md">{step.description}</p>
+                                <h3 className="text-3xl font-bold text-zinc-100 mb-2 group-hover:text-emerald-400 transition-colors">{step.title}</h3>
+                                <p className="text-xl text-zinc-400 leading-relaxed max-w-md">{step.description}</p>
                             </div>
                         </div>
                     ))}
@@ -188,14 +188,14 @@ export const HowItWorks = () => {
                                 <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-400 shadow-lg shadow-emerald-500/10 z-10">
                                     <Laptop className="w-6 h-6" />
                                 </div>
-                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Source</span>
+                                <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Source</span>
                             </div>
 
                             <div className="absolute top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
                                 <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-indigo-400 z-10">
                                     <Box className="w-6 h-6" />
                                 </div>
-                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Processing</span>
+                                <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Processing</span>
                             </div>
 
                             {/* Middle */}
@@ -203,7 +203,7 @@ export const HowItWorks = () => {
                                 <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-300 z-10">
                                     <Database className="w-6 h-6" />
                                 </div>
-                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Storage</span>
+                                <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Storage</span>
                             </div>
 
                             {/* Bottom Section */}
@@ -211,21 +211,21 @@ export const HowItWorks = () => {
                                 <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-blue-400 z-10">
                                     <AppWindow className="w-6 h-6" />
                                 </div>
-                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Interface</span>
+                                <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Interface</span>
                             </div>
 
                             <div className="absolute top-[75%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
                                 <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-emerald-500 z-10">
                                     <ScanSearch className="w-6 h-6" />
                                 </div>
-                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Analysis</span>
+                                <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Analysis</span>
                             </div>
 
                             <div className="absolute top-[75%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
                                 <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 flex items-center justify-center text-purple-400 z-10">
                                     <Server className="w-6 h-6" />
                                 </div>
-                                <span className="text-[10px] text-zinc-500 font-mono uppercase tracking-wider">Server</span>
+                                <span className="text-sm text-zinc-500 font-mono uppercase tracking-wider">Server</span>
                             </div>
 
                         </div>
